@@ -7,6 +7,8 @@ import EditEnterprise from "./pages/EditEnterprise.jsx";
 import CreateEnterprise from "./pages/CreateEnterprise.jsx";
 
 
+
+
 const App = () => {
   return (
       <Routes>
@@ -14,7 +16,7 @@ const App = () => {
         <Route path="/enterprises/details/:id" element={<ShowEnterprises />}></Route>
         <Route path="/enterprises/delete/:id" element={<DeleteEnterprise />}></Route>
         <Route path="/enterprises/edit/:id" element={<EditEnterprise />}></Route>
-        <Route path="/enterprises/create/:id" element={<CreateEnterprise />}></Route>
+        <Route path="/enterprises/create" element={<CreateEnterprise />}></Route>
 
       </Routes>
   );

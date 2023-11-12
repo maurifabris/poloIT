@@ -18,8 +18,8 @@ const ShowEnterprises = () => {
       .get(`http://localhost:5555/enterprises/${id}`)
       .then((response) => {
         console.log(response.data)
-        console.log(response.name)
-        setEnterprise(response.data)
+        console.log(response.data.enterprise.name)
+        setEnterprise(response.data.enterprise)
         setLoading(false)
       })
       .catch((error) => {
@@ -43,7 +43,7 @@ const ShowEnterprises = () => {
           </div>
           <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500'>Descripción</span>
-            <span>{enterprise.data}</span>
+            <span>{enterprise.description}</span>
           </div>
         </div>
       )}
