@@ -21,7 +21,7 @@ app.use('/enterprises', enterprisesRoute)
 mongoose
     .connect(mongoDBURL)
     .then(()=> {
-        console.log('App conected')
+        console.log('App conected to mongo')
         app.listen(PORT, () => {
             console.log(`listen port ${PORT}`)
         })
