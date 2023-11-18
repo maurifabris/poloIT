@@ -1,5 +1,6 @@
-# render.yaml
-app: polo-it
+app: my-app
 framework: vite
 frontend: frontend
-backend: vite-project
+frontendPackage: vite-project/package.json
+backend: backend
+backendPackage: backend/package.json
