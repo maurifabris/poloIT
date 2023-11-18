@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 
+//model for enterprises
+
 const entSchema = mongoose.Schema(
   {
     name: {

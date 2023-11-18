@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import BackButtons from '../compponents/BackButtons';
 import Spinner from '../compponents/Spinner'
+import { Link } from 'react-router-dom';
+
 
 const ShowEnterprises = () => {
   const [enterprise, setEnterprise] = useState({});
@@ -50,13 +52,16 @@ const ShowEnterprises = () => {
             <span>{enterprise.dev}</span>
           </div>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500'>Ámbito:</span>
+            <span className='text-xl mr-4 text-gray-500'>Ambito:</span>
             <span>{enterprise.scope}</span>
           </div>
           <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500'>N° de empleados:</span>
             <span>{enterprise.employees}</span>
           </div>
+          <Link to='/sendEmail'>
+            <button className='p-2 bg-sky-300 m-8'>Contactar empresa</button>
+          </Link>
         </div>
       )}
     </div>

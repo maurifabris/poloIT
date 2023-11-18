@@ -10,15 +10,23 @@ router.post('/', async (request, response) => {
     try{
         if(
             !request.body.name ||
-            !request.body.description
+            !request.body.description ||
+            !request.body.support ||
+            !request.body.dev ||
+            !request.body.scope ||
+            !request.body.employees
         ) {
             return response.status(400).send({
-                message: 'send all required fields: name and description'
+                message: 'send all required fields'
             })
         }
         const newent = {
             name: request.body.name,
-            description: request.body.description
+            description: request.body.description,
+            support: request.body.support,
+            dev: request.body.dev,
+            scope: request.body.scope,
+            employees: request.body.employees
         }
         const enterprise1 = await ent.create(newent)
         return response.status(201).send(enterprise1)
@@ -28,7 +36,7 @@ router.post('/', async (request, response) => {
     }
 })
 
-// roout all enterprises
+//To see all enterprises
 
 router.get('/', async (request, response)=>{
     try {
@@ -43,7 +51,7 @@ router.get('/', async (request, response)=>{
     }
 })
 
-
+ // get enterprises by id
 router.get('/:id', async (request, response)=>{
     try {
         const { id } = request.params;
@@ -85,7 +93,9 @@ router.put('/:id', async(request, response)=>{
     }
 })
 
-// Delete Rout
+
+
+// Delete enterprises 
 
 router.delete('/:id', async(request, response)=>{
     try {

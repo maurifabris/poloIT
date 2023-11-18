@@ -1,14 +1,12 @@
 import { Link } from 'react-router-dom';
 import { PiBookOpenTextLight } from 'react-icons/pi';
-import { BiUserCircle, BiShow } from 'react-icons/bi';
-import { AiOutlineEdit } from 'react-icons/ai';
+import {  BiShow } from 'react-icons/bi';
 import { BsInfoCircle } from 'react-icons/bs';
-import { MdOutlineDelete } from 'react-icons/md';
 import { useState } from 'react';
 import EnterpriseModal from './EnterpriseModal';
 
 
-
+// cards of enterprises
 const EnterpriseSingleCard = ({ enterprise }) => {
     const [showModal, setShowModal] = useState(false)
     return (
