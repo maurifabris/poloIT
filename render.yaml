@@ -3,7 +3,7 @@
 services:
   - name: backend
     type: web
-    buildCommand: cd backend && npm install && npm run build
+    buildCommand: npm install
     startCommand: npm start
     env:
       - key: NODE_ENV
@@ -12,7 +12,7 @@ services:
   - name: frontend
     type: web
     buildCommand: cd vite-proyect && npm install && npm run build
-    startCommand: npm start
+    startCommand: npm run preview
     env:
       - key: NODE_ENV
         value: production
